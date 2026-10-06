@@ -1,0 +1,33 @@
+{
+    "adaptation_fraction": 0.5,
+    "replay_fraction": 0.2,
+    "adaptation_epochs": 15,
+    "adaptation_batch_size": 128,
+    "adaptation_learning_rate": 0.0001,
+    "unseen_attack_count": 17,
+    "unseen_attacks": [
+        "apache2",
+        "httptunnel",
+        "mailbomb",
+        "mscan",
+        "named",
+        "processtable",
+        "ps",
+        "saint",
+        "sendmail",
+        "snmpgetattack",
+        "snmpguess",
+        "sqlattack",
+        "udpstorm",
+        "worm",
+        "xlock",
+        "xsnoop",
+        "xterm"
+    ],
+    "adaptation_samples": 9361,
+    "untouched_holdout_samples": 9368,
+    "replay_samples": 7200,
+    "before_holdout_macro_f1": 0.21667445347785005,
+    "after_holdout_macro_f1": 0.7690838220596715,
+    "macro_f1_improvement": 0.5524093685818214
+}

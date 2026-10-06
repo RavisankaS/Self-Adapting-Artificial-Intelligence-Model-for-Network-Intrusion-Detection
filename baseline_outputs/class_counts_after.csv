@@ -1,0 +1,6 @@
+attack_class,count
+DoS,15000
+Normal,15000
+Probe,2000
+R2L,2000
+U2R,2000

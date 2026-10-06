@@ -1,0 +1,56 @@
+{
+  "seed": 42,
+  "training_rows_after_duplicates": 145586,
+  "validation_rows": 21838,
+  "test_rows": 311029,
+  "feature_count": 106,
+  "number_of_classes": 5,
+  "classes": [
+    "DoS",
+    "Normal",
+    "Probe",
+    "R2L",
+    "U2R"
+  ],
+  "low_information_columns": [
+    "land",
+    "urgent",
+    "num_failed_logins",
+    "root_shell",
+    "su_attempted",
+    "num_shells",
+    "num_access_files",
+    "num_outbound_cmds",
+    "is_host_login",
+    "is_guest_login",
+    "dst_host_srv_diff_host_rate"
+  ],
+  "autoencoder_architecture": [
+    "Input",
+    "Dense(64, ReLU)",
+    "Dense(32, ReLU)",
+    "Bottleneck(16, ReLU)",
+    "Dense(32, ReLU)",
+    "Dense(64, ReLU)",
+    "Output"
+  ],
+  "classifier_architecture": [
+    "Input",
+    "Pre-trained DAE Encoder",
+    "Dense(16, ReLU)",
+    "Dropout(0.30)",
+    "Dense(5, Softmax)"
+  ],
+  "autoencoder_learning_rate": 0.001,
+  "classifier_learning_rate": 0.001,
+  "autoencoder_batch_size": 256,
+  "classifier_batch_size": 256,
+  "autoencoder_max_epochs": 50,
+  "classifier_max_epochs": 40,
+  "early_stopping_patience": 5,
+  "undersampling_cap": 15000,
+  "oversampling_minimum": 2000,
+  "xgboost_estimators": 200,
+  "xgboost_max_depth": 8,
+  "xgboost_learning_rate": 0.1
+}
